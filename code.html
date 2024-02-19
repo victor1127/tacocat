@@ -55,19 +55,50 @@
 
         <main class="flex-shrink-0">
             <div class="container p-5">
-                <h2 class="border-1 border-bottom border-dark mt-5">Title</h2>
-                <div class="row row-cols-1 row-cols-md-2">
-                    <div class="col-8">
+                <h2 class="border-1 border-bottom border-dark mt-5">Taco-Cat: JS Code</h2>
+                <div class="row">
+                    <div class="col">
                         <pre class="line-numbers">
                             <code class="language-javascript">
-                                function hello(){
-                                    alert("Hello world");
+                                function GetValues(){
+                                    let userInput = document.getElementById("userInput").value;
+                                    let word = userInput.trim();
+                                
+                                    if(!ValidateInput(word)){
+                                        alert("Please, enter a word or sentence");
+                                        return;
+                                    }
+                                
+                                    document.getElementById("resultHeader").classList.remove("invisible");
+                                    let result = document.getElementById("textResult");
+                                
+                                    if(IsPalindrome(word)){
+                                        result.innerHTML = `Seccess: <span class="fw-bold text-danger">${word}</span> is a Palindrome!`;
+                                        return;    
+                                    }
+                                
+                                    result.innerHTML = `Fail: <span class="fw-bold text-danger">${word}</span> is not a Palindrome!`;
+                                
+                                }
+                                
+                                function ValidateInput(word){
+                                    if(word.length === 0) return false;
+                                    return true;
+                                }
+                                
+                                function IsPalindrome(word){
+                                    if(word.length == 1) return true;
+                                    let reversedWord = ReverseStringRecursively(word);
+                                    return reversedWord == word;
+                                
+                                }
+                                
+                                function ReverseStringRecursively(word){
+                                    if(word.length == 1) return word;
+                                    return  ReverseStringRecursively(word.substring(1)) + word[0];
                                 }
                             </code>
                         </pre>
-                    </div>
-                    <div class="col">
-                        <h6>Detalles</h6>
                     </div>
                 </div>
             </div>
