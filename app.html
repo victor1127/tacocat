@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
     <head>
-        <title>App Name: Victor Manuel Campusano Sosa </title>
+        <title>Tacocat: The App </title>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,8 +21,8 @@
 
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="" width="30"> App name
+                <a class="navbar-brand" href="index.html">
+                    <img class="img-fluid nav-img" src="img/TAC-O-CAT.png" width="35">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,16 +31,19 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="app.html">Aplicacion</a>
+                            <a class="nav-link active" aria-current="page" href="app.html" >The App</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="code.html">Codigo</a>
+                            <a class="nav-link" href="code.html">The Code</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">Nosotros</a>
+                            <a class="nav-link" href="https://github.com/victor1127/tacocat.git" target="_blank">Git Repo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Contact Me</a>
                         </li>
                     </ul>
                 </div>
@@ -48,7 +51,42 @@
         </nav>
 
         <main class="flex-shrink-0">
-
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 pt-5">
+                    <div class="col border-end">
+                        <h4><strong>Taco-cat:</strong> A coding project</h4>
+                        <p class="">
+                            Taco Cat is a palindome. A Palindome is a word, phrase, or sequence that reads the same
+                            backward. Write a program that checks if the phrase stored is a palindome.
+                        </p>
+                        <div class="pt-3">
+                            <h5 class="border-bottom border-1">Instructions</h5>
+                            <p class="lead">Enter a word or phrase. Press the button and see the result.</p>
+                        </div>
+                    </div>
+    
+                    <div class="col">
+                        <h6>Enter a word, a sentence or phrase</h6>
+                        <form class="row">
+                            <div class="col">
+                                <input id="userInput" class="form-control" type="text" placeholder="Word" required>                             
+                            </div>
+                            
+                            <div class="col-12 pt-3 d-flex justify-content-md-end">
+                                <button class="btn btn-dark text-light" type="button" onclick="GetValues()">Submit</button>
+                            </div>
+    
+                        </form>
+    
+                        <div class="row pt-5">
+                            <div class="col">
+                                <h5 id="resultHeader" class="invisible">Results</h5>
+                                <p id="textResult"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer class="footer mt-auto py-3 bg-light">
